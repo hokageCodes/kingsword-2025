@@ -1,0 +1,165 @@
+/* Default navbar styles */
+.navbar {
+    margin-left: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: black;
+    opacity: 1;  /* Set to full opacity initially */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;  /* Smooth transition for opacity */
+}
+
+.navbar.scrolled {
+    opacity: 0.8;  /* Reduced opacity on scroll */
+}
+
+.hamburger {
+    display: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100; /* Make sure it is above other content */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-item {
+    margin-left: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+.nav-logo {
+    margin-top: 10px;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+.logo {
+    width: 280px;
+    height: auto;
+    max-height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Menu starts off-screen */
+        top: 80px;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0; /* Slide menu in when 'active' class is added */
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+        color: white;
+        z-index: 1000;
+    }
+
+    .logo {
+        margin-left: -50px;
+    }
+
+    .dropdown-menu {
+        background: white;
+        color: black;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-top: 10px;
+        width: 90%;  /* Ensures dropdown doesn't overflow horizontally */
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: auto;  /* Make the dropdown scrollable if necessary */
+        max-height: 150px;  /* Limit the height */
+    }
+
+    .dropdown-a {
+        color: black;
+    }
+
+    .dropdown-a:hover {
+        color: white;
+        background: black;
+    }
+}
+
+.dropdown-icon-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}  
+
+.dropdown-icon {
+    color: white; /* Set icon color to white */
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.dropdown-icon.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 120%;  /* Adjusted dropdown position */
+    left: 0;
+    background-color: black;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-a:hover {
+    background-color: #444;
+}
