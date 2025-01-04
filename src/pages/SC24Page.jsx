@@ -18,7 +18,7 @@ const SC24Page = () => {
       >
         <div className="mt-12 absolute inset-0 bg-black opacity-80 z-10 h-[400px]"></div> {/* Adjust opacity */}
         <div className="relative flex flex-col items-center justify-center h-full min-h-[60%] z-20 text-center text-white px-4"> {/* Increased min-height */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 mt-32">Supernatural Canada 2024</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 mt-32">Supernatural Canada 2025</h1>
           <p className="text-lg md:text-2xl mb-6">Click the link below to register</p>
           <a
             href="https://kingswordcalgary.churchcenter.com/registrations/events/2678923"

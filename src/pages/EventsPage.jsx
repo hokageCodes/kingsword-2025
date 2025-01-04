@@ -108,7 +108,7 @@ export default function EventsPage() {
                                 <p className="mt-4 text-gray-700 text-sm line-clamp-3">{event.description}</p>
                                 <a
                                     href={event.registrationLink}
-                                    className="block mt-4 bg-green-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-green-700 transition"
+                                    className="block mt-4 bg-black text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-green-700 transition"
                                 >
                                     Register Now
                                 </a>
